@@ -1,0 +1,33 @@
+# Dependencies (reinstalled from package-lock.json with npm ci)
+node_modules/
+
+# Secrets: Gemini key, MongoDB Atlas password. Only the .example template is pushed.
+.env
+.env.*
+!.env.example
+
+# Real Gradescope page saved from my account (grades, email, session tokens). Local demo only.
+mock-canvas/fixtures/gradescope-course.html
+
+# Chrome extension packaging: the private signing key and packed builds.
+# (server/certs/*.pem are FreeTSA's public certificates and must stay in the repo.)
+*.crx
+*.key
+extension.pem
+extension/*.pem
+*.zip
+
+# Logs
+*.log
+npm-debug.log*
+logs/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Local Claude Code settings (may contain local paths and permissions)
+.claude/settings.local.json

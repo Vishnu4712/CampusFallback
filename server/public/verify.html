@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verify Submission · CampusFallback</title>
+  <meta name="description" content="Check that a submitted file matches the fingerprint a student sealed with FreeTSA.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/verify.js"></script>
+</head>
+<body>
+  <main>
+    <header class="site">
+      <img src="/favicon.svg" alt="">
+      <a href="/">CampusFallback</a>
+    </header>
+
+    <h1>Check a sealed submission</h1>
+    <p class="lead">Drop in the file the student submitted. Your browser fingerprints it, and the file is never uploaded.</p>
+
+    <div id="link-status" class="result info" role="status" aria-live="polite"></div>
+
+    <label class="drop" id="drop">
+      <input type="file" id="file" class="visually-hidden">
+      <strong>Drop the file here</strong>
+      <span>or click to choose it</span>
+    </label>
+
+    <div id="result" class="result" role="status" aria-live="polite"></div>
+
+    <footer>
+      A file's SHA-256 fingerprint changes if even one byte of the file changes. The sealing time comes from
+      <a href="https://freetsa.org" rel="noopener">FreeTSA</a>, an independent RFC&nbsp;3161 timestamp authority, not from the student's laptop.
+    </footer>
+  </main>
+</body>
+</html>

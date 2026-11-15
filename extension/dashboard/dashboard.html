@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CampusFallback</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="brand">
+      <h1>CampusFallback</h1>
+      <span id="target-chip" class="chip" hidden>Mock Canvas</span>
+    </div>
+    <div class="banner" role="status" aria-live="polite">
+      <span id="status-pill" class="pill pill-checking">Canvas: checking…</span>
+      <span id="gradescope-pill" class="pill pill-checking">Gradescope: checking…</span>
+      <span id="last-synced">Not synced yet</span>
+      <span id="sync-note" class="sync-note" hidden></span>
+    </div>
+    <button id="sync-now" type="button" class="btn">Sync now</button>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button type="button" role="tab" id="tab-assignments" aria-controls="panel-assignments" aria-selected="true">Assignments</button>
+    <button type="button" role="tab" id="tab-announcements" aria-controls="panel-announcements" aria-selected="false" tabindex="-1">Announcements</button>
+    <button type="button" role="tab" id="tab-courses" aria-controls="panel-courses" aria-selected="false" tabindex="-1">Courses and files</button>
+  </nav>
+
+  <main id="main">
+    <p id="empty-state" class="empty" hidden>Nothing is saved yet. Click “Sync now” while Canvas is reachable.</p>
+
+    <section id="panel-assignments" role="tabpanel" aria-labelledby="tab-assignments" tabindex="0">
+      <section id="digest-card" class="card digest-card" aria-labelledby="digest-title" hidden></section>
+      <section id="queue-card" class="card queue-card" aria-labelledby="queue-title" hidden></section>
+      <div class="split">
+        <div id="assignment-groups" class="list-col"></div>
+        <article id="assignment-detail" class="card detail" aria-label="Assignment details"></article>
+      </div>
+    </section>
+
+    <section id="panel-announcements" role="tabpanel" aria-labelledby="tab-announcements" tabindex="0" hidden></section>
+
+    <section id="panel-courses" role="tabpanel" aria-labelledby="tab-courses" tabindex="0" hidden></section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <dialog id="lifeline-dialog" aria-labelledby="lifeline-title">
+    <h2 id="lifeline-title">Submit with Lifeline</h2>
+    <div id="lifeline-body"></div>
+    <form method="dialog"><button class="btn" type="submit">Close</button></form>
+  </dialog>
+
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>

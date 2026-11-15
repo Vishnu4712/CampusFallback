@@ -1,0 +1,425 @@
+{
+  "courses": [
+    {
+      "id": 101,
+      "name": "COMPSCI 311: Introduction to Algorithms",
+      "course_code": "COMPSCI 311",
+      "syllabus_body": "<h2>COMPSCI 311: Introduction to Algorithms</h2><p><strong>Lectures:</strong> Tuesday and Thursday, 1:00\u20132:15 PM</p><p><strong>Office hours:</strong> Wednesday 3:00\u20134:30 PM, or by appointment.</p><h3>Grading</h3><ul><li>Homework (8 sets): 30%</li><li>Midterms (2): 40%</li><li>Final exam: 30%</li></ul><h3>Late policy</h3><p>Homework is submitted on Canvas by 11:59 PM on the due date. Late work is not accepted without prior arrangement with the instructor.</p>"
+    },
+    {
+      "id": 202,
+      "name": "COMPSCI 326: Web Programming",
+      "course_code": "COMPSCI 326",
+      "syllabus_body": "<h2>COMPSCI 326: Web Programming</h2><p onclick=\"alert('sanitizer test: onclick')\"><strong>Labs:</strong> Friday, 10:10\u201311:00 AM</p><script>alert('sanitizer test: script')</script><iframe src=\"https://example.com\"></iframe><h3>Grading</h3><table><tr><th>Component</th><th>Weight</th></tr><tr><td>Labs</td><td>40%</td></tr><tr><td>Team project</td><td>45%</td></tr><tr><td>Reading reflections</td><td>15%</td></tr></table><p>Questions? Post on the course forum before emailing.</p>"
+    }
+  ],
+  "teachers": [
+    {
+      "id": 9001,
+      "course_id": 101,
+      "name": "Dana Rivera",
+      "sortable_name": "Rivera, Dana",
+      "short_name": "Dana Rivera",
+      "email": "dana.rivera@example.edu"
+    },
+    {
+      "id": 9002,
+      "course_id": 202,
+      "name": "Sam Okafor",
+      "sortable_name": "Okafor, Sam",
+      "short_name": "Sam Okafor"
+    }
+  ],
+  "assignments": [
+    {
+      "id": 1001,
+      "course_id": 101,
+      "name": "Homework 6: Dynamic Programming",
+      "demo": true,
+      "points_possible": 100,
+      "submission_types": [
+        "online_upload"
+      ],
+      "updated_days_ago": 6,
+      "description": "<p>Solve the four dynamic programming problems in the handout. For each one, give the recurrence, the table and the running time.</p><p>Handout: <a class=\"instructure_file_link\" href=\"{{BASE}}/courses/101/files/501/download?wrap=1\" data-api-endpoint=\"{{BASE}}/api/v1/courses/101/files/501\" data-api-returntype=\"File\">hw6-handout.pdf</a></p><p>Submit one file with your solutions.</p>"
+    },
+    {
+      "id": 1002,
+      "course_id": 101,
+      "name": "Problem Set 7 (Gradescope)",
+      "due_in_minutes": 2880,
+      "points_possible": 50,
+      "submission_types": [
+        "external_tool"
+      ],
+      "updated_days_ago": 3,
+      "description": "<p>Submit your scanned solutions through Gradescope. Tag every page with its problem number.</p>",
+      "external_tool_tag_attributes": {
+        "url": "{{BASE}}/gradescope/courses/101/assignments/1002",
+        "new_tab": true
+      }
+    },
+    {
+      "id": 1003,
+      "course_id": 101,
+      "name": "Project Proposal",
+      "due_in_minutes": 5760,
+      "points_possible": 40,
+      "submission_types": [
+        "online_upload"
+      ],
+      "allowed_extensions": [
+        "pdf"
+      ],
+      "updated_days_ago": 10,
+      "description": "<p>A one-page proposal for your final project: the problem, the algorithm you plan to implement and how you will evaluate it.</p><p>Grading rubric: <a class=\"instructure_file_link\" href=\"{{BASE}}/courses/101/files/502/download?wrap=1\" data-api-endpoint=\"{{BASE}}/api/v1/courses/101/files/502\" data-api-returntype=\"File\">project-proposal-rubric.pdf</a></p><p><strong>PDF only.</strong></p>"
+    },
+    {
+      "id": 1004,
+      "course_id": 101,
+      "name": "Midterm 2 Corrections",
+      "due_in_minutes": 12960,
+      "points_possible": 20,
+      "submission_types": [
+        "on_paper"
+      ],
+      "updated_days_ago": 2,
+      "description": "<p>Hand in corrections on paper at the start of lecture. Staple them to your original exam.</p>"
+    },
+    {
+      "id": 2001,
+      "course_id": 202,
+      "name": "Lab 8: Express REST API",
+      "due_in_minutes": 4320,
+      "lock_in_minutes": 5760,
+      "points_possible": 30,
+      "submission_types": [
+        "online_upload"
+      ],
+      "allowed_extensions": [
+        "zip",
+        "js"
+      ],
+      "updated_days_ago": 3,
+      "description": "<p>Build a small REST API with Express: list, create, update and delete routes for a <code>notes</code> resource, with input validation.</p><p>Start from <a class=\"instructure_file_link\" href=\"{{BASE}}/courses/202/files/601/download?wrap=1\" data-api-endpoint=\"{{BASE}}/api/v1/courses/202/files/601\" data-api-returntype=\"File\">lab8-starter-notes.txt</a>.</p><p>Submit a <code>.zip</code> of your project, or a single <code>.js</code> file. Submissions close 24 hours after the due date.</p>"
+    },
+    {
+      "id": 2002,
+      "course_id": 202,
+      "name": "Reading Reflection 5",
+      "due_in_minutes": 8640,
+      "points_possible": 10,
+      "submission_types": [
+        "online_text_entry",
+        "online_upload"
+      ],
+      "allowed_extensions": [
+        "pdf",
+        "docx",
+        "txt"
+      ],
+      "updated_days_ago": 8,
+      "description": "<p>Write 300 words on this week's reading about web accessibility. What surprised you, and what would you change in a site you use every day?</p>"
+    }
+  ],
+  "announcements": [
+    {
+      "id": 4001,
+      "course_id": 101,
+      "posted_hours_ago": 3,
+      "author": "Dana Rivera",
+      "title": "Homework 6 is due tonight",
+      "message": "<p>Reminder: Homework 6 is due tonight on Canvas. Submit one file. As the syllabus says, late work is not accepted without prior arrangement, so do not leave the upload to the last minute.</p>"
+    },
+    {
+      "id": 4002,
+      "course_id": 101,
+      "posted_hours_ago": 96,
+      "author": "Dana Rivera",
+      "title": "Midterm 2 grades posted",
+      "message": "<p>Midterm 2 grades are now posted. Corrections are due on paper in lecture; see the assignment for details.</p>"
+    },
+    {
+      "id": 4003,
+      "course_id": 202,
+      "posted_hours_ago": 48,
+      "author": "Sam Okafor",
+      "title": "Lab 8 starter notes released",
+      "message": "<p>The starter notes for Lab 8 are in the Weeks 9\u201310 module. Read the routing section before Friday's lab.</p>"
+    }
+  ],
+  "files": [
+    {
+      "id": 501,
+      "course_id": 101,
+      "display_name": "hw6-handout.pdf",
+      "updated_days_ago": 6,
+      "lines": [
+        "1. Weighted interval scheduling with a twist.",
+        "2. Longest palindromic subsequence.",
+        "3. Knapsack with two constraints.",
+        "4. Edit distance with transpositions."
+      ]
+    },
+    {
+      "id": 502,
+      "course_id": 101,
+      "display_name": "project-proposal-rubric.pdf",
+      "updated_days_ago": 10,
+      "lines": [
+        "Problem statement: 15 points",
+        "Planned algorithm: 15 points",
+        "Evaluation plan: 10 points"
+      ]
+    },
+    {
+      "id": 511,
+      "course_id": 101,
+      "display_name": "Lecture 01 - Asymptotic Analysis.pdf",
+      "updated_days_ago": 40,
+      "lines": [
+        "Big-O, Big-Omega and Big-Theta.",
+        "Comparing growth rates."
+      ]
+    },
+    {
+      "id": 512,
+      "course_id": 101,
+      "display_name": "Lecture 02 - Graph Traversal.pdf",
+      "updated_days_ago": 37,
+      "lines": [
+        "Breadth-first search and depth-first search.",
+        "Connected components."
+      ]
+    },
+    {
+      "id": 513,
+      "course_id": 101,
+      "display_name": "Lecture 03 - Topological Sort.pdf",
+      "updated_days_ago": 33,
+      "lines": [
+        "Directed acyclic graphs.",
+        "Ordering by finish time."
+      ]
+    },
+    {
+      "id": 514,
+      "course_id": 101,
+      "display_name": "Lecture 04 - Interval Scheduling.pdf",
+      "updated_days_ago": 30,
+      "lines": [
+        "Greedy: earliest finish time first.",
+        "The exchange argument."
+      ]
+    },
+    {
+      "id": 515,
+      "course_id": 101,
+      "display_name": "Lecture 05 - Minimum Spanning Trees.pdf",
+      "updated_days_ago": 26,
+      "lines": [
+        "Kruskal and Prim.",
+        "The cut property."
+      ]
+    },
+    {
+      "id": 516,
+      "course_id": 101,
+      "display_name": "Lecture 06 - Shortest Paths.pdf",
+      "updated_days_ago": 23,
+      "lines": [
+        "Dijkstra's algorithm.",
+        "Why negative edges break it."
+      ]
+    },
+    {
+      "id": 517,
+      "course_id": 101,
+      "display_name": "Lecture 07 - Divide and Conquer.pdf",
+      "updated_days_ago": 19,
+      "lines": [
+        "Merge sort and counting inversions.",
+        "Closest pair of points."
+      ]
+    },
+    {
+      "id": 518,
+      "course_id": 101,
+      "display_name": "Lecture 08 - Master Theorem.pdf",
+      "updated_days_ago": 16,
+      "lines": [
+        "Solving recurrences.",
+        "Three cases and worked examples."
+      ]
+    },
+    {
+      "id": 519,
+      "course_id": 101,
+      "display_name": "Lecture 09 - Dynamic Programming I.pdf",
+      "updated_days_ago": 12,
+      "lines": [
+        "Weighted interval scheduling.",
+        "Memoization versus tabulation."
+      ]
+    },
+    {
+      "id": 520,
+      "course_id": 101,
+      "display_name": "Lecture 10 - Dynamic Programming II.pdf",
+      "updated_days_ago": 9,
+      "lines": [
+        "Knapsack.",
+        "Pseudo-polynomial running time."
+      ]
+    },
+    {
+      "id": 521,
+      "course_id": 101,
+      "display_name": "Lecture 11 - Dynamic Programming III.pdf",
+      "updated_days_ago": 5,
+      "lines": [
+        "Sequence alignment.",
+        "Recovering the solution from the table."
+      ]
+    },
+    {
+      "id": 522,
+      "course_id": 101,
+      "display_name": "Lecture 12 - Bellman-Ford.pdf",
+      "updated_days_ago": 2,
+      "lines": [
+        "Shortest paths with negative edges.",
+        "Detecting negative cycles."
+      ]
+    },
+    {
+      "id": 601,
+      "course_id": 202,
+      "display_name": "lab8-starter-notes.txt",
+      "updated_days_ago": 3,
+      "lines": [
+        "Lab 8 starter notes",
+        "",
+        "1. npm init -y && npm install express",
+        "2. Create routes for GET, POST, PUT and DELETE on /notes.",
+        "3. Validate the request body and return 400 on bad input.",
+        "4. Test every route with curl before you submit."
+      ]
+    },
+    {
+      "id": 602,
+      "course_id": 202,
+      "display_name": "Week 09 slides - REST APIs.pdf",
+      "updated_days_ago": 9,
+      "lines": [
+        "Resources, verbs and status codes.",
+        "Designing URLs."
+      ]
+    },
+    {
+      "id": 603,
+      "course_id": 202,
+      "display_name": "Week 10 slides - Databases.pdf",
+      "updated_days_ago": 2,
+      "lines": [
+        "Documents versus tables.",
+        "Indexes and unique keys."
+      ]
+    },
+    {
+      "id": 604,
+      "course_id": 202,
+      "display_name": "midterm-solutions.pdf",
+      "updated_days_ago": 14,
+      "locked": true,
+      "lines": [
+        "Locked until grades are released."
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": 301,
+      "course_id": 101,
+      "name": "Unit 1: Graphs and Greedy",
+      "items": [
+        {
+          "file": 511
+        },
+        {
+          "file": 512
+        },
+        {
+          "file": 513
+        },
+        {
+          "file": 514
+        },
+        {
+          "file": 515
+        },
+        {
+          "file": 516
+        }
+      ]
+    },
+    {
+      "id": 302,
+      "course_id": 101,
+      "name": "Unit 2: Divide and Conquer",
+      "items": [
+        {
+          "file": 517
+        },
+        {
+          "file": 518
+        }
+      ]
+    },
+    {
+      "id": 303,
+      "course_id": 101,
+      "name": "Unit 3: Dynamic Programming",
+      "items": [
+        {
+          "file": 519
+        },
+        {
+          "file": 520
+        },
+        {
+          "file": 521
+        },
+        {
+          "file": 522
+        },
+        {
+          "assignment": 1001
+        }
+      ]
+    },
+    {
+      "id": 401,
+      "course_id": 202,
+      "name": "Weeks 9\u201310: Servers and Data",
+      "items": [
+        {
+          "file": 602
+        },
+        {
+          "file": 601
+        },
+        {
+          "file": 603
+        },
+        {
+          "file": 604
+        },
+        {
+          "title": "Express routing guide",
+          "external_url": "https://expressjs.com/en/guide/routing.html"
+        }
+      ]
+    }
+  ]
+}

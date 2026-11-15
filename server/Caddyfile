@@ -1,0 +1,15 @@
+# /etc/caddy/Caddyfile on the Vultr server. Replace your-domain.example with the GoDaddy domain
+# (README step 6 does it with sed). Caddy gets and renews the HTTPS certificate automatically.
+
+your-domain.example, www.your-domain.example {
+	encode zstd gzip
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		-Server
+	}
+
+	# The Node app (pm2) listens on port 3000. Caddy passes the real client IP in X-Forwarded-For,
+	# which the app trusts from loopback only, so rate limits apply per student, not per proxy.
+	reverse_proxy localhost:3000
+}

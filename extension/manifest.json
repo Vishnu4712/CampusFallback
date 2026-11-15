@@ -1,0 +1,62 @@
+{
+  "manifest_version": 3,
+  "name": "CampusFallback",
+  "version": "0.1.0",
+  "description": "Keeps your Canvas courses available offline and protects your deadlines during outages.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAskBi8gwNmr29ZMnCXIUWZpiMx5KAgluK5Hrx2aCO3QLuPv/Uy75GuRp0NqTbEGlHWBV2Gq2g5fvfmTJnntVBpv2TLBBdG6wv+asP0G8vIWgFaZnSZXU6ozgpN4UdCUrHWizQNP36IbHTq8ZaK2h7zKuM/NPX+L6UqrVfDaZIY8LIACZHlM6kqGYxHBvfNf9Jn7V2IIU4T6bx7kLtyiuDTlDpv7StzNwcVRryXjbDQ4zz8TE3pCOfDenGAdax9OCBSBejJ1405+yos/cMxszTA1lIaavAeZL3lOV0bKJrU7Lwan0JniHAMQ4TyjKHLnhzujKc7/dRnhA7VDfjdCdRwwIDAQAB",
+  "action": {
+    "default_title": "Open CampusFallback",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.gradescope.com/courses/*",
+        "http://localhost:4000/gradescope/courses/*"
+      ],
+      "js": [
+        "content/gradescope.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://umamherst.instructure.com/*"
+      ],
+      "js": [
+        "content/canvas.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "alarms",
+    "storage",
+    "unlimitedStorage",
+    "cookies",
+    "notifications"
+  ],
+  "host_permissions": [
+    "http://localhost:4000/*",
+    "http://localhost:3000/*",
+    "https://umamherst.instructure.com/*",
+    "https://*.instructure.com/*",
+    "https://*.inscloudgate.net/*",
+    "https://www.gradescope.com/*"
+  ]
+}
