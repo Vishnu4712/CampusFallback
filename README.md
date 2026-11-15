@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="docs/banner.jpg" alt="CampusFallback: Canvas crashed. Your deadline didn't." width="100%">
+  <a href="https://youtu.be/OwUUVF--JYs">
+    <img src="docs/banner.jpg" alt="CampusFallback: Canvas crashed. Your deadline didn't. Click to watch the demo video on YouTube." width="100%">
+  </a>
+  <br>
+  <sub>▶️ <a href="https://youtu.be/OwUUVF--JYs">Click the banner to watch the demo on YouTube</a></sub>
 </p>
 
 <p align="center">
@@ -10,7 +14,7 @@
 
 **A Chrome extension that keeps UMass students working when Canvas, NetID or Microsoft goes down, and protects their deadlines when it happens.**
 
-🌐 **Live site:** [campusfallback.dev](https://campusfallback.dev/) · 🏆 **Devpost:** [devpost.com/software/campusfallback](https://devpost.com/software/campusfallback)
+🌐 **Live site:** [campusfallback.dev](https://campusfallback.dev/) · ▶️ **Demo video:** [youtu.be/OwUUVF--JYs](https://youtu.be/OwUUVF--JYs) · 🏆 **Devpost:** [devpost.com/software/campusfallback](https://devpost.com/software/campusfallback)
 
 <p>
   <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-ES_modules-F7DF1E?logo=javascript&logoColor=black">
