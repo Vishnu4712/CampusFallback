@@ -24,9 +24,6 @@
   <img alt="MongoDB Atlas" src="https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white">
   <img alt="FreeTSA" src="https://img.shields.io/badge/FreeTSA-RFC_3161-0A66C2">
   <img alt="OpenSSL" src="https://img.shields.io/badge/OpenSSL-ts-721412?logo=openssl&logoColor=white">
-  <img alt="Vultr" src="https://img.shields.io/badge/Vultr-hosting-007BFC?logo=vultr&logoColor=white">
-  <img alt="Caddy" src="https://img.shields.io/badge/Caddy-HTTPS-1F88C0?logo=caddy&logoColor=white">
-  <img alt="pm2" src="https://img.shields.io/badge/pm2-process_manager-2B037A?logo=pm2&logoColor=white">
   <img alt="React" src="https://img.shields.io/badge/React-landing_site-61DAFB?logo=react&logoColor=black">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-landing_site-3178C6?logo=typescript&logoColor=white">
   <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-landing_site-06B6D4?logo=tailwindcss&logoColor=white">
@@ -90,7 +87,7 @@ flowchart LR
   LIFE -- "3-step upload" --> MOCK
   QUEUE -- "auto-submit" --> MOCK
   LIFE -- "Gmail draft" --> GMAIL["Gmail"]
-  subgraph API["Backend on Vultr (Express behind Caddy)"]
+  subgraph API["Backend (Express)"]
     TS["POST /api/timestamp"]
     RC["GET /api/receipt/:sha256"]
     GEM["POST /api/draft-email, /api/digest"]
@@ -119,7 +116,6 @@ flowchart LR
 | Extension | Chrome Manifest V3, plain JavaScript ES modules (no bundler), Dexie over IndexedDB, WebCrypto, `chrome.alarms`, `chrome.notifications` |
 | Backend | Node 20+, Express, `@google/genai` (**Gemini**), **MongoDB Atlas**, `express-rate-limit`, `openssl` for RFC 3161 timestamps |
 | Proof | **FreeTSA** trusted timestamps, verified with `openssl ts -verify` |
-| Hosting | **Vultr** Ubuntu server, Caddy (automatic HTTPS), pm2, **GoDaddy** domain |
 | Landing site | React, TypeScript, Vite, Tailwind CSS, Framer Motion ([campusfallback.dev](https://campusfallback.dev/)) |
 | Demo | A local mock Canvas (Express) with outage, login, lock and Gradescope switches |
 
@@ -167,9 +163,9 @@ Which servers the extension talks to is set in [`extension/lib/config.js`](exten
 
 ---
 
-## Deploying the backend
+## Server settings
 
-Step-by-step commands for Vultr, Caddy, pm2, the GoDaddy DNS record and the MongoDB Atlas allowlist are in [`server/README.md`](server/README.md).
+The backend reads these from `server/.env` (copy `server/.env.example`).
 
 | Variable | Purpose |
 |---|---|
@@ -190,7 +186,7 @@ campusfallback/
 │   ├── content/          Canvas tab sync, Gradescope deadline reader
 │   ├── dashboard/        offline dashboard and Lifeline UI
 │   └── lib/              sync engine, Canvas client, storage, hashing, submission, queue
-├── server/           Express API, verify page, Caddyfile, deploy guide
+├── server/           Express API and verify page
 │   ├── src/              routes (receipts, Gemini) and libs (FreeTSA, MongoDB, Gemini)
 │   ├── public/           landing page and /verify
 │   └── certs/            FreeTSA public certificates
