@@ -158,40 +158,6 @@ Which servers the extension talks to is set in [`extension/lib/config.js`](exten
 
 ---
 
-## Demo (about 90 seconds)
-
-```bash
-# 1. Show the synced dashboard, then turn Wi-Fi off and reload: everything is still there.
-
-# 2. Canvas goes down.
-curl -X POST localhost:4000/__outage/on
-
-# 3. In the dashboard: Homework 6 → Submit with Lifeline → pick a PDF.
-#    Canvas fails → FreeTSA receipt → Gemini-drafted Gmail opens → file queued.
-
-# 4. Canvas comes back. Click "Retry now" (or wait about 2 minutes) → "Uploaded on Canvas" notification.
-curl -X POST localhost:4000/__outage/off
-
-# 5. Open the verify link from the email and drop in the same file → green "Sealed at …, verified by FreeTSA".
-```
-
-### Mock Canvas switches
-
-| Command | Effect |
-|---|---|
-| `POST /__outage/on` · `off` · `storage` | Every Canvas route returns 503 · back to normal · only file uploads and downloads fail |
-| `POST /__session/off` · `html` · `on` | API returns 401 · API returns a 200 HTML login page · normal |
-| `POST /__lock/:aid` · `/__unlock/:aid` | Submissions to that assignment return 403 "locked" |
-| `POST /__gradescope/off` · `on` | The mock Gradescope goes down / comes back |
-| `POST /__reset?due=5` | Reseed everything; the demo assignment is due in 5 minutes |
-| `GET /__state` | Current switches, plus every submission received with its SHA-256 |
-
-Set `TEACHER_EMAIL=you@example.com` when starting the mock to send the demo emails to yourself.
-
-**Gradescope deadlines in the demo:** save one of your Gradescope course pages as `mock-canvas/fixtures/gradescope-course.html`, then open `http://localhost:4000/gradescope/courses/1`. That file is in `.gitignore`, because a saved page contains your grades and session tokens.
-
----
-
 ## Using it with real UMass Canvas and Gradescope
 
 1. In [`extension/lib/config.js`](extension/lib/config.js), set `TARGET = 'real'` and reload the extension. Real Canvas data goes into its own local database, separate from the mock.
@@ -231,12 +197,3 @@ campusfallback/
 ├── mock-canvas/      Mock Canvas API with outage switches, for the demo
 └── docs/             Images
 ```
-
----
-
-## Known limitations
-
-- **Gradescope can't be submitted to automatically.** Many CICS courses use it, so Lifeline seals, emails and reminds you instead.
-- **Submitting to real Canvas is turned off in this build.** On real Canvas, Lifeline seals and emails. The full auto-submit flow runs against the mock.
-- **Real Canvas sync needs a Canvas tab open at least once.** With none open, the dashboard says *"Open Canvas once to sync"*.
-- **FreeTSA is a free public service.** If it is slow or down, the seal request is queued and retried.
