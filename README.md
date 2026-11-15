@@ -3,7 +3,7 @@
     <img src="docs/banner.jpg" alt="CampusFallback: Canvas crashed. Your deadline didn't. Click to watch the demo video on YouTube." width="100%">
   </a>
   <br>
-  <sub>▶️ <a href="https://youtu.be/OwUUVF--JYs">Click the banner to watch the demo on YouTube</a></sub>
+  <sub>▶️ <a href="https://youtu.be/OwUUVF--JYs">Click here to watch the demo on YouTube</a></sub>
 </p>
 
 <p align="center">
